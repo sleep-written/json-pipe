@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "scripts": {
+    "prepare": "node --run build",
+    "clean": "rm -rf ./dist",
+    "build": "node --run clean && bb-path-alias build && chmod +x ./dist/index.mjs",
+    "start": "node --import @bleed-believer/path-alias ./src/index.mts"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "json-pipe": "./dist/index.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "ava": "^6.2.0",
+    "typescript": "^5.8.3",
+    "@bleed-believer/path-alias": "^2.3.1"
+  }
+}
