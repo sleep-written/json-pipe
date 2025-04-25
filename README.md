@@ -1,6 +1,6 @@
-# json-pipe
+# json-pipe-cli
 
-`json-pipe` is a simple CLI for reading JSON from stdin, extracting nested keys, and printing the result to stdout. It supports robust error handling for empty pipes or unexpected TTY usage.
+`json-pipe-cli` is a simple CLI for reading JSON from stdin, extracting nested keys, and printing the result to stdout. It supports robust error handling for empty pipes or unexpected TTY usage.
 
 ## Features
 
@@ -16,13 +16,13 @@
 Install globally with npm:
 
 ```bash
-npm install -g json-pipe
+npm install -g json-pipe-cli
 ```
 
 Or add to your project as a dependency:
 
 ```bash
-npm install --save json-pipe
+npm install --save json-pipe-cli
 ```
 
 ## CLI Usage
@@ -32,7 +32,7 @@ npm install --save json-pipe
 Read JSON from a file or other command and pretty-print the entire object:
 
 ```bash
-cat data.json | json-pipe
+cat data.json | json-pipe-cli
 ```
 
 **Output:**
@@ -48,7 +48,7 @@ Parsed JSON:
 Use `-k` or `--keys` followed by one or more property names to drill into the object:
 
 ```bash
-echo '{"foo":{"bar":123}}' | json-pipe -k foo bar
+echo '{"foo":{"bar":123}}' | json-pipe-cli -k foo bar
 ```
 
 **Output:**
@@ -61,10 +61,10 @@ Parsed JSON value for json["foo"]["bar"]:
 
 ### Help on missing pipe
 
-If you run `json-pipe` without piping data, it will exit with code **666** and display a helpful message:
+If you run `json-pipe-cli` without piping data, it will exit with code **666** and display a helpful message:
 
 ```bash
-$ json-pipe
+$ json-pipe-cli
 ERROR:
 ------------------------------------------------
 TTY mode isn't allowed for this application

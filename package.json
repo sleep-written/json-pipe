@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "json-pipe",
+  "name": "json-pipe-cli",
   "version": "0.0.1",
   "description": "A simple CLI for reading and parse JSON from stdin",
   "scripts": {
@@ -13,7 +13,7 @@
     "dist"
   ],
   "bin": {
-    "json-pipe": "./dist/index.mjs"
+    "json-pipe-cli": "./dist/index.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.15.2",
