@@ -1,6 +1,7 @@
 {
   "type": "module",
   "name": "json-pipe",
+  "version": "0.0.1",
   "description": "A simple CLI for reading and parse JSON from stdin",
   "scripts": {
     "prepare": "node --run build",
